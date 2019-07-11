@@ -108,7 +108,7 @@
 		 			    <input type="hidden" name="purchased" id="purchased" value="0">
 		 			    <input type="hidden" name="items" id="items" value="0">
 						<input type="hidden" id="price" value=22>
-						<input type="number" id="amount" min="1" max="999" value="1">
+						<input type="number" class="amount" id="amount" min="1" max="999" value="1" oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.value = this.value.replace(/(\..*)\./g, '$1');" >
 						<button type="button" class="buy" data-dismiss="modal" onclick="comprar()">COMPRAR</button>
 		 			</form>	
 				</div>
