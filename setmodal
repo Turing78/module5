@@ -1,0 +1,45 @@
+<div class="row" id="products">
+			<div class="col-sm-6 col-lg-3">
+				<div class="detail-content" id="offer1" data-toggle="modal" data-target="#Detail" onclick="setModal(this)"> 
+					<img class="img-responsive" src="./imgs/offer1.png" />
+					<div id="text_offer1" class="detail-text">KAMECO SPORT CAPLESS ROLLER PEN AND PENCIL SET IN POUCH WHITE</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-lg-3">
+				<div>
+					<div class="detail-content" id="offer2" data-toggle="modal" data-target="#Detail" onclick="setModal(this)">
+						<img class="img-responsive" src="./imgs/offer2.png" />
+						<div id="text_offer2" class="detail-text">HACOA MASKING TAPE HOLDER</div>
+						
+					</div>
+					<div class="d-img"><img src="./imgs/sign_new_offer.png" /></div>
+				</div>
+			</div> 
+      ...
+      
+  
+function setModal(offer){
+  var offer_id = offer.id;
+  var img = "./imgs/detail_"+offer_id+".png";
+  var text = document.getElementById("text_"+offer_id).innerHTML;
+
+  
+  document.getElementById("img_modal").src=img;
+  document.getElementById("text_modal").innerHTML=text;
+  
+  var price=25;
+  switch (offer_id) { 
+    case "offer2":  
+       price=22; 
+       break;
+  case "offer3":
+        price=26;
+        break;
+  case "offer4":
+        price=20;
+        break; 
+      }
+
+  document.getElementById("price").value=price;
+  document.getElementById("price_modal").innerHTML=price.toString()+".00€";
+}
