@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+ 	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Akemi 6</title>
+    	<link rel="stylesheet" href="css6/bootstrap.min.css">
+    	<link rel="stylesheet" href="css6/styles.css">
+    	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    	<link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	</head>	
+<body onload="adjustLogo()">
+	<div class="container" id="margins">
+		<div class = "row" id ="top_nav">
+			<div class = "col-xs-10 col-sm-5">
+				<img class="img-responsive" id="logo" src='./imgs/logo_akemi.png'/>
+			</div>
+			<div class="col-xs-1"> <a href="javascript:void(0);" class="icon" onclick="accordion()">
+			          <i class="fa fa-bars"></i>
+			</a></div>
+			<div class="col-xs-12 col-sm-2 buttons" id = "bt1">
+			     	<a href="">PRODUCTS</a>
+			     	<a href="">BRANDS</a>
+			     	<a href="">AKEMI SETS</a>
+			</div>
+			<div class="col-xs-12 col-sm-2 buttons" id = "bt2">
+			     	<a href="">ABOUT US</a>
+			     	<a href="">REGISTER</a>
+			     	<a href="">LOGIN</a>
+			</div>
+			<div class="col-xs-12 col-sm-2 buttons" id = "bt3">
+			     	<a href="">CART</a>
+			     	<a href="" id="items_display">0 ITEMS</a>
+			     	<a href="" id = "purchased_display">0.0 €</a>
+			</div>
+		</div>
+
+		<div class="row" id="banner">
+			<div class="col-xs-12">
+					<img class="img-responsive" src="./imgs/banner1.png" />
+			</div>
+		 </div>
+
+		<div class="row" id="new_products">
+			<div class="col-xs-12">
+					<img class="img-responsive" src="./imgs/new_products.png" />
+			</div>
+		 </div>
+
+		 <div class="row" id="products">
+			<div class="col-xs-12 col-sm-6 col-lg-3" id="offer1" data-toggle="modal" data-target="#detail" onclick="setModal(this)">
+					<div class="detail">
+						<div class="detail_content">
+							<img class="img-responsive" src="./imgs/offer1.png" />
+							<div class = "detail_text"  id="text_offer1"> Kaweco Sport Capless Roller Pen And Pencil Set In Pouch White</div> 
+						</div>
+					</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3" id="offer2" data-toggle="modal" data-target="#detail" onclick="setModal(this)">
+					<div class="detail">
+						<div class="detail_content">
+							<img class="img-responsive" src="./imgs/offer2.png" />
+							<div class = "detail_text" id="text_offer2"> Hacoa Masking Tape Holder</div> 
+						</div>
+						<div class="img_detail"><img src="./imgs/sign_new_offer.png" /></div>
+					</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3" id="offer3" data-toggle="modal" data-target="#detail" onclick="setModal(this)">
+					<div class="detail">
+						<div class="detail_content">
+							<img class="img-responsive" src="./imgs/offer3.png"/>
+							<div class = "detail_text"  id="text_offer3"> Hacoa Black Walnut Business Card Holder</div> 
+						</div>
+						<div class="img_detail"><img src="./imgs/sign_new_offer.png" /></div>
+					</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-lg-3" id="offer4" data-toggle="modal" data-target="#detail" onclick="setModal(this)">
+					<div class="detail">
+						<div class="detail_content">
+							<img class="img-responsive" src="./imgs/offer4.png" />
+							<div class = "detail_text"  id="text_offer4"> Postalco LEgal Envelope Navy</div> 
+						</div>
+						<div class="img_detail"><img src="./imgs/sign_offer.png" /></div>
+					</div>
+			</div>
+		 </div>
+
+	</div>
+
+	<div class="modal fade" id="detail" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<img class="img-responsive" src="./imgs/detail_offer2.png" id = "img_modal" />
+					<div class="purchase_text" id="purchase_text" >Hacoa Masking Tape Holder</div>
+					<div class="purchase_price">22¢</div>
+					<form>
+
+		 			    <input type="hidden" name="purchased" id="purchased" value="0">
+		 			    <input type="hidden" name="items" id="items" value="0">
+						<input type="hidden" id="price" value=22>
+						<input type="number" id="amount" min="1" max="999" value="1">
+						<button type="button" class="buy" data-dismiss="modal" onclick="comprar()">COMPRAR</button>
+					</form> 
+				</div>
+				<img id="img_purchase_new" src="./imgs/sign_new_offer_purchase.png"/>
+			</div>
+	</div>
+
+
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>
